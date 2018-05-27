@@ -1,2 +1,3 @@
 rootProject.name = 'ddd-sample'
+include 'test'
 

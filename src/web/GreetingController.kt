@@ -1,4 +1,4 @@
-package org.dddsample
+package org.dddsample.web
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
@@ -17,5 +17,4 @@ class GreetingController {
     @GetMapping("/test")
     fun test(@RequestParam(value = "name", defaultValue = "World") name: String) =
             "Hello, $name"
-
 }

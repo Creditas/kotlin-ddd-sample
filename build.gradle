@@ -14,6 +14,7 @@ buildscript {
 
 group 'test2'
 version '1.0-SNAPSHOT'
+ext.axonVersion = '3.2.2'
 
 apply plugin: 'kotlin'
 //apply plugin: 'kotlin-allopen'
@@ -24,19 +25,19 @@ repositories {
     jcenter()
 }
 
-//jar {
-//    baseName = 'gs-rest-service'
-//    version = '0.1.0'
-//}
-
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile 'org.springframework.boot:spring-boot-starter-web'
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    compile "org.axonframework:axon-core:$axonVersion"
+    compile "org.axonframework:axon-test:$axonVersion"
+    compile 'org.jetbrains.kotlin:kotlin-test'
+    //compile 'org.junit.jupiter:junit-jupiter-api'
 }
 
 sourceSets {
     main.kotlin.srcDirs += 'src'
+    test.kotlin.srcDirs += 'test'
 }
 
 //
