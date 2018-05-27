@@ -9,13 +9,14 @@ import org.dddsample.domain.order.User
 class OrderHandler {
     @CommandHandler
     fun CreateOrder(command: CreateOrderCommand) {
-        val order = Order(command.user)
+        //val order = Order(command.user)
+
         //...
     }
 
     @CommandHandler
     fun AddProduct(command: AddProductCommand) {
-        val order = Order(User("foo")) //find from database ...
+        //val order = Order(User("foo")) //find from database ...
 
         //...
     }

@@ -32,7 +32,7 @@ dependencies {
     compile "org.axonframework:axon-core:$axonVersion"
     compile "org.axonframework:axon-test:$axonVersion"
     compile 'org.jetbrains.kotlin:kotlin-test'
-    //compile 'org.junit.jupiter:junit-jupiter-api'
+    compile "org.axonframework:axon-spring:$axonVersion"
 }
 
 sourceSets {
