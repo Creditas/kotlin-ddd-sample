@@ -1,5 +1,6 @@
 package org.dddsample.tests
 
+import junit.framework.Assert.assertTrue
 import org.axonframework.test.aggregate.AggregateTestFixture
 import org.axonframework.test.aggregate.FixtureConfiguration
 import org.dddsample.application.order.commands.CreateOrderCommand
@@ -8,8 +9,7 @@ import org.dddsample.domain.order.events.OrderCreatedEvent
 import org.junit.Before
 import org.junit.Test
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class OrderTest {
+class OrderTests {
     private var fixture: FixtureConfiguration<Order>? = null
 
     @Before
