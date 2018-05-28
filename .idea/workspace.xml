@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d340c3b0-986f-4228-af72-eacc4f7a62fc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/org/dddsample/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/dddsample/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/org/dddsample/SpringBootApplicationKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/dddsample/SpringBootApplicationKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/org/dddsample/application/order/OrderHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/dddsample/application/order/OrderHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/dddsample/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/dddsample/SpringBootApplicationKt.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/org/dddsample/domain/order/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/dddsample/domain/order/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/org/dddsample/tests/OrderTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SpringBootApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpringBootApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/order/OrderHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/order/OrderHandler.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/order/Order.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/order/Order.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/OrderTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/test/OrderTests.kt" afterDir="false" />
     </list>
@@ -55,12 +49,6 @@
                 <item name="ddd-sample" type="f1a62948:ProjectNode" />
                 <item name="ddd-sample" type="2d1252cf:ModuleNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="ddd-sample" type="f1a62948:ProjectNode" />
-                <item name="ddd-sample" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -70,31 +58,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="34" column="56" lean-forward="true" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderHandler.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/order/OrderHandler.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Order.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/domain/order/Order.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+            <state relative-caret-position="119">
+              <caret line="21" column="76" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
               <folding>
-                <element signature="e#36#678#0" expanded="true" />
+                <element signature="e#36#661#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,11 +73,50 @@
       <file leaf-file-name="SpringBootApplication.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SpringBootApplication.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="28" column="56" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="56" />
+            <state relative-caret-position="135">
+              <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
               <folding>
-                <element signature="e#23#901#0" expanded="true" />
+                <element signature="e#23#966#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddProductCommand.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/order/commands/AddProductCommand.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateOrderCommand.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/order/commands/CreateOrderCommand.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleCommandBus.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.axonframework/axon-core/3.2.2/5d5ceb016f5a7bae5ab969a8e050877cf102b2d2/axon-core-3.2.2-sources.jar!/org/axonframework/commandhandling/SimpleCommandBus.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="89" column="23" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
+              <folding>
+                <element signature="method#dispatch#0;class#SimpleCommandBus#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultCommandGateway.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.axonframework/axon-core/3.2.2/5d5ceb016f5a7bae5ab969a8e050877cf102b2d2/axon-core-3.2.2-sources.jar!/org/axonframework/commandhandling/gateway/DefaultCommandGateway.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="140" column="36" selection-start-line="140" selection-start-column="36" selection-end-line="140" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -345,62 +354,6 @@
                 <option name="description" value="Displays the properties of root project 'ddd-sample'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="properties" />
-              </ExternalTaskPojo>
-            </list>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/test">
-          <value>
-            <list>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by project ':test'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/test" />
-                <option name="name" value="components" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of project ':test'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/test" />
-                <option name="name" value="projects" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the dependent components of components in project ':test'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/test" />
-                <option name="name" value="dependentComponents" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays all buildscript dependencies declared in project ':test'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/test" />
-                <option name="name" value="buildEnvironment" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in project ':test'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/test" />
-                <option name="name" value="dependencyInsight" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in project ':test'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/test" />
-                <option name="name" value="dependencies" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays a help message." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/test" />
-                <option name="name" value="help" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of project ':test'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/test" />
-                <option name="name" value="model" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of project ':test'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/test" />
-                <option name="name" value="properties" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from project ':test'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/test" />
-                <option name="name" value="tasks" />
               </ExternalTaskPojo>
             </list>
           </value>
@@ -644,10 +597,10 @@
         <option value="$PROJECT_DIR$/src/OrderTest.kt" />
         <option value="$PROJECT_DIR$/src/tests/OrderTest.kt" />
         <option value="$PROJECT_DIR$/test/OrderTest.kt" />
-        <option value="$PROJECT_DIR$/test/OrderTests.kt" />
         <option value="$PROJECT_DIR$/src/application/order/OrderHandler.kt" />
-        <option value="$PROJECT_DIR$/src/SpringBootApplication.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/test/OrderTests.kt" />
+        <option value="$PROJECT_DIR$/src/SpringBootApplication.kt" />
         <option value="$PROJECT_DIR$/src/domain/order/Order.kt" />
       </list>
     </option>
@@ -675,6 +628,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -698,13 +653,17 @@
               <item name="ddd-sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ddd-sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ddd-sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -715,7 +674,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="grad&#9;ACTION&#9;ActivateGradleToolWindow&#10;gradle&#9;ACTION&#9;ActivateGradleToolWindow" />
+    <property name="SearchEverywhereHistoryKey" value="gradle&#9;ACTION&#9;ActivateGradleToolWindow&#10;grad&#9;ACTION&#9;ActivateGradleToolWindow" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -759,7 +718,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OrderTests.add product to order">
+  <component name="RunManager" selected="Kotlin.org.dddsample.SpringBootApplicationKt">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -953,9 +912,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.OrderTests.add product to order" />
         <item itemvalue="Kotlin.org.dddsample.SpringBootApplicationKt" />
         <item itemvalue="JUnit.OrderTests.create a new order" />
+        <item itemvalue="JUnit.OrderTests.add product to order" />
         <item itemvalue="JUnit.OrderTests.test1" />
         <item itemvalue="JUnit.OrderTest.test1" />
       </list>
@@ -976,7 +935,9 @@
       <workItem from="1526237969808" duration="4997000" />
       <workItem from="1527359065630" duration="18497000" />
       <workItem from="1527389611526" duration="3475000" />
-      <workItem from="1527438442329" duration="10489000" />
+      <workItem from="1527438442329" duration="15761000" />
+      <workItem from="1527454929014" duration="712000" />
+      <workItem from="1527467366084" duration="5731000" />
     </task>
     <servers />
   </component>
@@ -999,47 +960,59 @@
     <history-entry file="OrderTests_add_product_to_order - 2018.05.27 at 15h 05m 40s.xml">
       <configuration name="OrderTests.add product to order" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="OrderTests_add_product_to_order - 2018.05.27 at 17h 44m 09s.xml">
+      <configuration name="OrderTests.add product to order" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderTests_create_a_new_order - 2018.05.27 at 18h 03m 37s.xml">
+      <configuration name="OrderTests.create a new order" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderTests_create_a_new_order - 2018.05.27 at 18h 04m 20s.xml">
+      <configuration name="OrderTests.create a new order" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderTests_create_a_new_order - 2018.05.27 at 18h 05m 21s.xml">
+      <configuration name="OrderTests.create a new order" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47579000" />
+    <option name="totallyTimeSpent" value="59294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5014641" side_tool="true" weight="0.28775835" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5021962" side_tool="true" weight="0.2782194" />
+      <window_info anchor="right" id="Maven Projects" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.27344993" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
+      <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.45310014" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.4978038" weight="0.3290938" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="bottom" id="Java Enterprise" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Run Dashboard" order="8" weight="0.3290938" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49853587" weight="0.3036566" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Messages" order="13" sideWeight="0.4978038" visible="true" weight="0.2782194" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Run Dashboard" order="14" weight="0.3290938" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49853587" weight="0.618442" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
-      <window_info anchor="right" id="Bean Validation" order="3" />
-      <window_info id="Web" order="2" side_tool="true" />
-      <window_info anchor="right" id="Gradle" order="3" weight="0.329429" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="Kotlin Bytecode" order="4" weight="0.38799414" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info anchor="right" id="Gradle" order="6" weight="0.2591508" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="right" id="Kotlin Bytecode" order="10" weight="0.38799414" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="11" weight="0.27344993" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -1053,97 +1026,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/test/OrderTests.kt</url>
-          <line>34</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="9" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/web/GreetingController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/order/Order.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-          <folding>
-            <element signature="e#36#678#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/order/events/OrderCreatedEvent.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/Greeting.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SpringBootApplication.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <element signature="e#23#901#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/OrderTests.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/GreetingController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/order/Order.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#36#678#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/order/events/OrderCreatedEvent.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/web/Greeting.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1162,6 +1048,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <folding>
+            <element signature="e#29#568#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1262,13 +1151,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Order.kt" />
     <entry file="file://$PROJECT_DIR$/src/domain/orders/das.kt" />
-    <entry file="file://$PROJECT_DIR$/src/application/order/commands/AddProductCommand.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/order/User.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1285,13 +1167,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/build.gradle" />
     <entry file="file://$PROJECT_DIR$/src/tests/OrderTest.kt" />
-    <entry file="file://$PROJECT_DIR$/src/application/order/commands/CreateOrderCommand.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/order/events/OrderCreatedEvent.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1327,23 +1202,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/OrderTests.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SpringBootApplication.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="28" column="56" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="56" />
-          <folding>
-            <element signature="e#23#901#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/order/events/ProductAddedEvent.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1351,43 +1209,151 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="34" column="56" lean-forward="true" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.axonframework/axon-core/3.2.2/5d5ceb016f5a7bae5ab969a8e050877cf102b2d2/axon-core-3.2.2-sources.jar!/org/axonframework/commandhandling/model/AggregateRoot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
-          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/annotation/Retention.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="44" column="2" lean-forward="true" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.3.9.RELEASE/c22b7284000897b976c9ee6c12f74f6bc3a35ccc/spring-context-4.3.9.RELEASE-sources.jar!/org/springframework/stereotype/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.axonframework/axon-core/3.2.2/5d5ceb016f5a7bae5ab969a8e050877cf102b2d2/axon-core-3.2.2-sources.jar!/org/axonframework/commandhandling/model/AggregateLifecycle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="65" column="28" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.axonframework/axon-spring/3.2.2/31655eab85ffdcbb5db8f3ea3b86c89bc332ebba/axon-spring-3.2.2-sources.jar!/org/axonframework/spring/stereotype/Aggregate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        <state relative-caret-position="222">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
           <folding>
             <element signature="e#0#2138#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.axonframework/axon-core/3.2.2/5d5ceb016f5a7bae5ab969a8e050877cf102b2d2/axon-core-3.2.2-sources.jar!/org/axonframework/commandhandling/model/inspection/AnnotatedAggregate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.axonframework/axon-core/3.2.2/5d5ceb016f5a7bae5ab969a8e050877cf102b2d2/axon-core-3.2.2-sources.jar!/org/axonframework/commandhandling/CommandHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="45" column="7" lean-forward="true" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.axonframework/axon-core/3.2.2/5d5ceb016f5a7bae5ab969a8e050877cf102b2d2/axon-core-3.2.2-sources.jar!/org/axonframework/messaging/annotation/MessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/order/OrderHandler.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="68">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="56" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/OrderTests.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="27" column="48" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="48" />
+          <folding>
+            <element signature="e#29#568#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.axonframework/axon-core/3.2.2/5d5ceb016f5a7bae5ab969a8e050877cf102b2d2/axon-core-3.2.2-sources.jar!/org/axonframework/commandhandling/GenericCommandMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.axonframework/axon-core/3.2.2/5d5ceb016f5a7bae5ab969a8e050877cf102b2d2/axon-core-3.2.2-sources.jar!/org/axonframework/commandhandling/gateway/DefaultCommandGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="140" column="36" selection-start-line="140" selection-start-column="36" selection-end-line="140" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.axonframework/axon-core/3.2.2/5d5ceb016f5a7bae5ab969a8e050877cf102b2d2/axon-core-3.2.2-sources.jar!/org/axonframework/commandhandling/SimpleCommandBus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="89" column="23" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
+          <folding>
+            <element signature="method#dispatch#0;class#SimpleCommandBus#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/order/commands/AddProductCommand.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.41/dc11619be6c45157a142d3753017544896da8e69/kotlin-stdlib-1.2.41-sources.jar!/kotlin/util/Standard.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="65" column="24" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/order/commands/CreateOrderCommand.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SpringBootApplication.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+          <folding>
+            <element signature="e#23#966#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/order/Order.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        <state relative-caret-position="119">
+          <caret line="21" column="76" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
           <folding>
-            <element signature="e#36#678#0" expanded="true" />
+            <element signature="e#36#661#0" expanded="true" />
           </folding>
         </state>
       </provider>

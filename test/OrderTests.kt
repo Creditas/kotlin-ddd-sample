@@ -1,6 +1,5 @@
 package org.dddsample.tests
 
-import junit.framework.Assert.assertTrue
 import org.axonframework.test.aggregate.AggregateTestFixture
 import org.axonframework.test.aggregate.FixtureConfiguration
 import org.dddsample.application.order.commands.AddProductCommand

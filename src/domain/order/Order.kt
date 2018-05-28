@@ -1,31 +1,30 @@
 package org.dddsample.domain.order
 
-import org.axonframework.commandhandling.CommandHandler
-import org.axonframework.commandhandling.model.AggregateIdentifier
-import org.axonframework.commandhandling.model.AggregateRoot
-import org.axonframework.eventhandling.EventHandler
-import org.axonframework.eventsourcing.EventSourcingHandler
+import org.axonframework.commandhandling.model.AggregateLifecycle.apply
 import org.dddsample.application.order.commands.AddProductCommand
 import org.dddsample.application.order.commands.CreateOrderCommand
 import org.dddsample.domain.order.events.OrderCreatedEvent
 import org.dddsample.domain.order.events.ProductAddedEvent
+
+import org.axonframework.commandhandling.CommandHandler
+import org.axonframework.commandhandling.model.AggregateIdentifier
+import org.axonframework.eventsourcing.EventSourcingHandler
 import org.axonframework.spring.stereotype.Aggregate
 
 @Aggregate
 class Order {
     @AggregateIdentifier
     var id: Int = 0
+
     lateinit var user: User
     val products = mutableListOf<Product>()
 
-    @CommandHandler
-    fun createOrder(command: CreateOrderCommand) {
-        apply(OrderCreatedEvent(orderId = 1, command.user))
-    }
+    constructor() {} //TODO: remove or replace for lombok @NoArgsConstructor
 
     @CommandHandler
-    fun addProduct(command: AddProductCommand) {
-        apply(ProductAddedEvent(orderId = command.orderId, product = command.product))
+    constructor(command: CreateOrderCommand) {
+        println("chegou")
+        apply(OrderCreatedEvent(orderId = 1, user = command.user))
     }
 
     @EventSourcingHandler
@@ -33,6 +32,11 @@ class Order {
         this.id = event.orderId
 
         println("criou")
+    }
+
+    @CommandHandler
+    fun addProduct(command: AddProductCommand) {
+        apply(ProductAddedEvent(orderId = command.orderId, product = command.product))
     }
 
     @EventSourcingHandler
