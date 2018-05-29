@@ -11,29 +11,33 @@ import org.dddsample.domain.order.events.OrderCreatedEvent
 import org.dddsample.domain.order.events.ProductAddedEvent
 import org.junit.Before
 import org.junit.Test
+import java.util.*
 
+@Suppress("UNUSED_VARIABLE")
 class OrderTests {
     private lateinit var fixture: FixtureConfiguration<Order>
 
     @Before
     @Throws(Exception::class)
     fun setUp() {
-        fixture = AggregateTestFixture<Order>(Order::class.java)
+        fixture = AggregateTestFixture(Order::class.java)
     }
 
     @Test
     fun `create a new order`() {
         val user = User(name = "ana")
-        fixture.given()
+        fixture.givenNoPriorActivity()
                 .`when`(CreateOrderCommand(user))
-                .expectEvents(OrderCreatedEvent(0, user))
+                .expectEvents(OrderCreatedEvent(UUID.randomUUID(), user))
     }
 
     @Test
     fun `add product to order`() {
+        val user = User(name = "ana")
         val product = Product(name = "keyboard")
-        fixture.given()
-                .`when`(AddProductCommand(product = product, orderId = 1, quantity = 10))
-                .expectEvents(ProductAddedEvent(1, product))
+        val id = UUID.randomUUID()
+        fixture.given(OrderCreatedEvent(id, user))
+                .`when`(AddProductCommand(id, product, 10))
+                .expectEvents(ProductAddedEvent(id, product))
     }
 }

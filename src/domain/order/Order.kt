@@ -10,12 +10,12 @@ import org.axonframework.commandhandling.CommandHandler
 import org.axonframework.commandhandling.model.AggregateIdentifier
 import org.axonframework.eventsourcing.EventSourcingHandler
 import org.axonframework.spring.stereotype.Aggregate
+import java.util.*
 
 @Aggregate
 class Order {
     @AggregateIdentifier
-    var id: Int = 0
-
+    lateinit var id: UUID
     lateinit var user: User
     val products = mutableListOf<Product>()
 
@@ -23,15 +23,7 @@ class Order {
 
     @CommandHandler
     constructor(command: CreateOrderCommand) {
-        println("chegou")
-        apply(OrderCreatedEvent(orderId = 1, user = command.user))
-    }
-
-    @EventSourcingHandler
-    fun on(event: OrderCreatedEvent) {
-        this.id = event.orderId
-
-        println("criou")
+        apply(OrderCreatedEvent(orderId = UUID.randomUUID(), user = command.user))
     }
 
     @CommandHandler
@@ -40,9 +32,13 @@ class Order {
     }
 
     @EventSourcingHandler
+    fun on(event: OrderCreatedEvent) {
+        this.id = event.orderId
+        this.user = event.user
+    }
+
+    @EventSourcingHandler
     fun on(event: ProductAddedEvent) {
         this.products.add(event.product)
-
-        println("adicionou")
     }
 }
