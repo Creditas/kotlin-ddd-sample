@@ -1,0 +1,3 @@
+rootProject.name = 'kotlinddd'
+
+include 'web', 'domain'

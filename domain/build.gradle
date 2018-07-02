@@ -1,0 +1,16 @@
+sourceCompatibility = 1.10
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.11'
+}
+
+idea {
+    module {
+        sourceDirs += file('src/main')
+        testSourceDirs += file('src/test')
+    }
+}
