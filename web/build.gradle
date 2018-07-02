@@ -11,10 +11,6 @@ buildscript {
     }
 }
 
-repositories {
-    jcenter()
-}
-
 apply plugin: 'kotlin-spring'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
@@ -23,14 +19,7 @@ dependencies {
     compile("org.jetbrains.kotlin:kotlin-reflect")
     compile('org.springframework.boot:spring-boot-starter')
     compile('org.springframework.boot:spring-boot-starter-web')
+
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile 'org.jetbrains.kotlin:kotlin-test-junit:1.0.6'
-    testCompile 'junit:junit:4.11'
-}
-
-idea {
-    module {
-        sourceDirs += file('src/main')
-        testSourceDirs += file('src/test')
-    }
 }

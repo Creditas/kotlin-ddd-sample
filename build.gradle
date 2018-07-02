@@ -15,27 +15,23 @@ buildscript {
     }
 }
 
-apply plugin: 'kotlin'
 apply plugin: 'org.gradle.java.experimental-jigsaw'
-
 group = 'kotlinddd'
 version = '1.0-SNAPSHOT'
-sourceCompatibility = 1.10
-
-sourceSets {
-    //main.kotlin.srcDirs += 'web'
-}
 
 allprojects {
     apply plugin: 'kotlin'
     apply plugin: 'idea'
 
-    dependencies {
-        compile("org.jetbrains.kotlin:kotlin-stdlib")
-    }
+    sourceCompatibility = 1.10
 
     repositories {
         jcenter()
+    }
+
+    dependencies {
+        testCompile 'junit:junit:4.11'
+        compile("org.jetbrains.kotlin:kotlin-stdlib")
     }
 }
 
@@ -43,5 +39,12 @@ subprojects {
     sourceSets {
         main.kotlin.srcDirs += 'src/main'
         test.kotlin.srcDirs += 'src/test'
+    }
+
+    idea {
+        module {
+            sourceDirs += file('src/main')
+            testSourceDirs += file('src/test')
+        }
     }
 }
