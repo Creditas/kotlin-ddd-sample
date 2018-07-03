@@ -49,3 +49,7 @@ subprojects {
         }
     }
 }
+
+sourceSets {
+    main.kotlin.srcDirs += 'web/src/main'
+}
