@@ -1,0 +1,5 @@
+dependencies {
+    compile "org.axonframework:axon-core:$axonVersion"
+    compile "org.axonframework:axon-test:$axonVersion"
+    compile "org.axonframework:axon-spring:$axonVersion"
+}

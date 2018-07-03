@@ -2,17 +2,15 @@ package kotlinddd.web.controllers
 
 import kotlinddd.web.models.Greeting
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
-import java.util.concurrent.atomic.AtomicLong
 
 @RestController
 class GreetingController {
 
-    val counter = AtomicLong()
-
-    @GetMapping("/greeting")
-    fun greeting(@RequestParam(value = "name", defaultValue = "World") name: String) =
+    @PostMapping("/order")
+    fun createOrder(@RequestParam(value = "name", defaultValue = "World") name: String) =
             Greeting(1, "Hello, $name")
 
     @GetMapping("/test")

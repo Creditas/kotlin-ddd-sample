@@ -18,6 +18,7 @@ buildscript {
 apply plugin: 'org.gradle.java.experimental-jigsaw'
 group = 'kotlinddd'
 version = '1.0-SNAPSHOT'
+ext.axonVersion = '3.2.2'
 
 allprojects {
     apply plugin: 'kotlin'
