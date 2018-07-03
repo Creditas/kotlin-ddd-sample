@@ -50,6 +50,6 @@ subprojects {
     }
 }
 
-sourceSets {
-    main.kotlin.srcDirs += 'web/src/main'
-}
+//sourceSets {
+//    main.kotlin.srcDirs += 'web/src/main'
+//}
