@@ -26,4 +26,4 @@ build/
 !**/test/**/build
 *.iml
 !**/testData/**/*.iml
-
+.idea/
