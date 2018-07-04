@@ -1,5 +1,6 @@
 dependencies {
-    compile "org.axonframework:axon-core:$axonVersion"
-    compile "org.axonframework:axon-test:$axonVersion"
-    compile "org.axonframework:axon-spring:$axonVersion"
+    compile("org.axonframework:axon-core:$axonVersion") {
+        exclude module:'xpp3' //removed to not conflict with xml parser included in :web project Spring dependency
+    }
+    testCompile "org.axonframework:axon-test:$axonVersion"
 }

@@ -16,10 +16,15 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 dependencies {
-    compile("org.jetbrains.kotlin:kotlin-reflect")
-    compile('org.springframework.boot:spring-boot-starter')
-    compile('org.springframework.boot:spring-boot-starter-web')
-
-    testCompile('org.springframework.boot:spring-boot-starter-test')
-    testCompile 'org.jetbrains.kotlin:kotlin-test-junit:1.0.6'
+    implementation project(':application')
+    implementation 'org.jetbrains.kotlin:kotlin-reflect'
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compile("org.axonframework:axon-core:$axonVersion") {
+        exclude module:'xpp3'
+    }
+    //compile "org.axonframework:axon-spring:$axonVersion"
+    
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.jetbrains.kotlin:kotlin-test-junit:1.0.6'
 }

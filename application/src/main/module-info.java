@@ -1,5 +1,6 @@
 module kotlinddd.application {
+    exports kotlinddd.application;
+
     requires kotlin.stdlib;
-    requires java.base;
-    requires java.sql;
+    requires org.axonframework.core;
 }
