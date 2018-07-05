@@ -8,6 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/domain.iml" group="domain" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/domain_main.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/domain_main.iml" group="domain" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/domain_test.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/domain_test.iml" group="domain" />
+      <module fileurl="file://$PROJECT_DIR$/infrastructure/infrastructure.iml" filepath="$PROJECT_DIR$/infrastructure/infrastructure.iml" group="infrastructure" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/infrastructure/infrastructure_main.iml" filepath="$PROJECT_DIR$/.idea/modules/infrastructure/infrastructure_main.iml" group="infrastructure" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/infrastructure/infrastructure_test.iml" filepath="$PROJECT_DIR$/.idea/modules/infrastructure/infrastructure_test.iml" group="infrastructure" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinddd.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinddd.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinddd_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinddd_main.iml" group="kotlinddd" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlinddd_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlinddd_test.iml" group="kotlinddd" />

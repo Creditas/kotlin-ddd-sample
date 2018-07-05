@@ -6,6 +6,8 @@
       <module name="application_test" target="1.10" />
       <module name="domain_main" target="1.10" />
       <module name="domain_test" target="1.10" />
+      <module name="infrastructure_main" target="1.10" />
+      <module name="infrastructure_test" target="1.10" />
       <module name="kotlin-ddd-sample-domain_main" target="1.10" />
       <module name="kotlin-ddd-sample-domain_test" target="1.10" />
       <module name="kotlin-ddd-sample-web_main" target="1.10" />

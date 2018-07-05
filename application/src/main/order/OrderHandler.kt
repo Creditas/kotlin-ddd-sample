@@ -2,12 +2,15 @@ package kotlinddd.application.order
 
 import kotlinddd.application.order.commands.CreateOrderCommand
 import org.axonframework.commandhandling.CommandHandler
+import java.security.InvalidParameterException
 
-class OrderHandler {
+open class OrderHandler {
     @CommandHandler
-    fun createOrder(command: CreateOrderCommand) {
-        println("Create order handled!")
-        //val order = Order(command.user)
-        //...
+    fun createOrder(command: CreateOrderCommand): String {
+        if (command.user == "Foo")
+            throw InvalidParameterException()
+
+        return "Hello, ${command.user}!"
     }
 }
+

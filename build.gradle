@@ -19,7 +19,7 @@ apply plugin: 'org.gradle.java.experimental-jigsaw'
 
 group = 'kotlinddd'
 version = '1.0-SNAPSHOT'
-ext.axonVersion = '3.2.2'
+ext.axonVersion = '3.3'
 
 allprojects {
     apply plugin: 'kotlin'

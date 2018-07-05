@@ -17,13 +17,16 @@ apply plugin: 'io.spring.dependency-management'
 
 dependencies {
     implementation project(':application')
+    implementation project(':domain')
+    implementation project(':infrastructure')
     implementation 'org.jetbrains.kotlin:kotlin-reflect'
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compile("org.axonframework:axon-core:$axonVersion") {
         exclude module:'xpp3'
     }
-    //compile "org.axonframework:axon-spring:$axonVersion"
+    implementation "org.axonframework:axon-spring:$axonVersion"
+    implementation "org.axonframework:axon-spring-boot-autoconfigure:$axonVersion"
     
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.jetbrains.kotlin:kotlin-test-junit:1.0.6'
