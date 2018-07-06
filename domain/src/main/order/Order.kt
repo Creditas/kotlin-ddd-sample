@@ -22,13 +22,13 @@ class Order(val id: UUID, val customer: Customer) {
         item.changeQuantity(quantity)
     }
 
-    fun removeProduct(product: Product, quantity: Int) {
+    fun removeProduct(product: Product) {
         validadeIfProductIsOnList(product)
 
         items.removeAll { it.product == product }
     }
 
-    fun validadeIfProductIsOnList(product: Product) {
+    private fun validadeIfProductIsOnList(product: Product) {
         var isOnList = items.any { it.product == product }
         if (!isOnList)
             throw BusinessException("The product isn't included in this order")
