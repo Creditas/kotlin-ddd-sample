@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration
 import repositories.OrderRepositoryImpl
 
 @Configuration
-class HandlersRegistration {
+class Repositories {
     @Bean
     fun getOrderRepository() : OrderRepository {
         return OrderRepositoryImpl()

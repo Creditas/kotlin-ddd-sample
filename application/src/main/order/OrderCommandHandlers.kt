@@ -9,7 +9,7 @@ import kotlinddd.domain.order.OrderRepository
 import org.axonframework.commandhandling.CommandHandler
 import java.util.UUID
 
-open class OrderHandler(val repository: OrderRepository) {
+open class OrderCommandHandlers(val repository: OrderRepository) {
     @CommandHandler
     fun createOrder(command: CreateOrderCommand): UUID {
         val orderId = UUID.randomUUID()

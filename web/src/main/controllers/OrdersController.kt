@@ -8,12 +8,11 @@ import models.request.AddProductRequest
 import models.request.ChangeProductQuantityRequest
 import models.request.CreateOrderRequest
 import org.axonframework.commandhandling.gateway.CommandGateway
+import org.axonframework.eventhandling.EventBus
 import java.util.*
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-import javax.validation.Valid
-
 
 @RestController
 class OrderController(val commandGateway: CommandGateway) {
