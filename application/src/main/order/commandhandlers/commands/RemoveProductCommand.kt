@@ -1,4 +1,4 @@
-package kotlinddd.application.order.commands
+package kotlinddd.application.order.commandhandlers.commands
 
 import java.util.UUID
 

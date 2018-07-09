@@ -1,17 +1,16 @@
-package kotlinddd.application.order
+package kotlinddd.application.order.commandhandlers
 
-import kotlinddd.application.order.commands.AddProductCommand
-import kotlinddd.application.order.commands.ChangeProductQuantityCommand
-import kotlinddd.application.order.commands.CreateOrderCommand
-import kotlinddd.application.order.commands.RemoveProductCommand
+import kotlinddd.application.order.commandhandlers.commands.*
 import kotlinddd.domain.order.Order
 import kotlinddd.domain.order.OrderRepository
-import kotlinddd.domain.order.PaymentService
 import org.axonframework.commandhandling.CommandHandler
+import kotlinddd.domain.order.payment.PaymentService
 import org.axonframework.eventhandling.EventBus
 import java.util.UUID
 
-open class OrderCommandHandlers(val repository: OrderRepository, /*TODO REMOVE*/ val paymentService: PaymentService, val eventBus: EventBus) {
+open class OrderCommandHandlers(private val repository: OrderRepository,
+                                private val paymentService: PaymentService,
+                                private val eventBus: EventBus) {
     @CommandHandler
     fun createOrder(command: CreateOrderCommand): UUID {
         val orderId = UUID.randomUUID()
@@ -19,8 +18,6 @@ open class OrderCommandHandlers(val repository: OrderRepository, /*TODO REMOVE*/
 
         val order = Order(orderId, customer)
         repository.save(order)
-
-        order.pay(paymentService, eventBus)
 
         return orderId
     }
@@ -51,6 +48,15 @@ open class OrderCommandHandlers(val repository: OrderRepository, /*TODO REMOVE*/
         val product = repository.findProductById(command.productId)
 
         order.removeProduct(product)
+
+        repository.save(order)
+    }
+
+    @CommandHandler
+    fun payOrder(command: PayOrderCommand) {
+        val order = repository.findById(command.orderId)
+
+        order.pay(command.creditCard, paymentService, eventBus) //TODO provide global access to eventBus
 
         repository.save(order)
     }

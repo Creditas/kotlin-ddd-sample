@@ -1,8 +1,8 @@
 package kotlinddd.web.configuration.injection
 
-import kotlinddd.application.order.OrderCommandHandlers
+import kotlinddd.application.order.commandhandlers.OrderCommandHandlers
 import kotlinddd.domain.order.OrderRepository
-import kotlinddd.domain.order.PaymentService
+import kotlinddd.domain.order.payment.PaymentService
 import org.axonframework.eventhandling.EventBus
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean

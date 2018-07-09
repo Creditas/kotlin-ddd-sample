@@ -1,15 +1,14 @@
 package kotlinddd.web.controllers
 
-import kotlinddd.application.order.commands.AddProductCommand
-import kotlinddd.application.order.commands.ChangeProductQuantityCommand
-import kotlinddd.application.order.commands.CreateOrderCommand
-import kotlinddd.application.order.commands.RemoveProductCommand
+import kotlinddd.application.order.commandhandlers.commands.AddProductCommand
+import kotlinddd.application.order.commandhandlers.commands.ChangeProductQuantityCommand
+import kotlinddd.application.order.commandhandlers.commands.CreateOrderCommand
+import kotlinddd.application.order.commandhandlers.commands.RemoveProductCommand
 import models.request.AddProductRequest
 import models.request.ChangeProductQuantityRequest
 import models.request.CreateOrderRequest
 import org.axonframework.commandhandling.gateway.CommandGateway
-import org.axonframework.eventhandling.EventBus
-import java.util.*
+import java.util.UUID
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*

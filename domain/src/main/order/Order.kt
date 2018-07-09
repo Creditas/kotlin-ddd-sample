@@ -1,13 +1,17 @@
 package kotlinddd.domain.order
 
 import kotlinddd.domain.BusinessException
-import order.Customer
+import kotlinddd.domain.order.payment.CreditCard
+import kotlinddd.domain.order.payment.PaymentService
+import kotlinddd.domain.order.customer.Customer
 import org.axonframework.eventhandling.EventBus
 import org.axonframework.eventhandling.GenericEventMessage
 import java.util.UUID
 
 class Order(val id: UUID, val customer: Customer) {
     private val items = mutableListOf<Item>()
+    var paid: Boolean = false
+        private set
 
     fun addProduct(product: Product, quantity: Int) {
         if (items.any { it.product == product })
@@ -30,10 +34,17 @@ class Order(val id: UUID, val customer: Customer) {
         items.removeAll { it.product == product }
     }
 
-    fun pay(paymentService: PaymentService, eventBus: EventBus) {
-        val debitedWithSuccess = paymentService.debitValueByCreditCart("1234");
-        if (debitedWithSuccess)
+    fun pay(creditCard: CreditCard, paymentService: PaymentService, eventBus: EventBus) {
+        if (this.paid)
+            throw BusinessException("Order already paid!")
+
+        val debitedWithSuccess = paymentService.debitValueByCreditCard(creditCard)
+        if (debitedWithSuccess) {
+            this.paid = true
             eventBus.publish(GenericEventMessage.asEventMessage<OrderPaid>(OrderPaid(this.id))) //TODO improve this by putting some helpers in a aggregate base class and may creating an DomainEvent base class
+        } else {
+            throw BusinessException("The amount could not be debited from this credit card")
+        }
     }
 
     private fun validateIfProductIsOnList(product: Product) {

@@ -1,6 +1,6 @@
 package kotlinddd.domain.order
 
-import order.Customer
+import kotlinddd.domain.order.customer.Customer
 import java.util.UUID
 
 interface OrderRepository {
