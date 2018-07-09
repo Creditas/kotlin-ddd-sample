@@ -33,7 +33,7 @@ class Order(val id: UUID, val customer: Customer) {
     fun pay(paymentService: PaymentService, eventBus: EventBus) {
         val debitedWithSuccess = paymentService.debitValueByCreditCart("1234");
         if (debitedWithSuccess)
-            eventBus.publish(GenericEventMessage.asEventMessage<OrderPaid>(OrderPaid(this.id))) //TODO imporove this by putting some helpers in a aggregate base class and may creating an DomainEvent base class
+            eventBus.publish(GenericEventMessage.asEventMessage<OrderPaid>(OrderPaid(this.id))) //TODO improve this by putting some helpers in a aggregate base class and may creating an DomainEvent base class
     }
 
     private fun validateIfProductIsOnList(product: Product) {

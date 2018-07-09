@@ -1,9 +1,9 @@
 package kotlinddd.web.configuration.injection
 
 import kotlinddd.domain.order.OrderRepository
+import kotlinddd.infrastructure.repositories.OrderRepositoryImpl
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
-import repositories.OrderRepositoryImpl
 
 @Configuration
 class Repositories {

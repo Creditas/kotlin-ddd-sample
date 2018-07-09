@@ -6,10 +6,12 @@ import kotlinddd.application.order.commands.CreateOrderCommand
 import kotlinddd.application.order.commands.RemoveProductCommand
 import kotlinddd.domain.order.Order
 import kotlinddd.domain.order.OrderRepository
+import kotlinddd.domain.order.PaymentService
 import org.axonframework.commandhandling.CommandHandler
+import org.axonframework.eventhandling.EventBus
 import java.util.UUID
 
-open class OrderCommandHandlers(val repository: OrderRepository) {
+open class OrderCommandHandlers(val repository: OrderRepository, /*TODO REMOVE*/ val paymentService: PaymentService, val eventBus: EventBus) {
     @CommandHandler
     fun createOrder(command: CreateOrderCommand): UUID {
         val orderId = UUID.randomUUID()
@@ -17,6 +19,8 @@ open class OrderCommandHandlers(val repository: OrderRepository) {
 
         val order = Order(orderId, customer)
         repository.save(order)
+
+        order.pay(paymentService, eventBus)
 
         return orderId
     }

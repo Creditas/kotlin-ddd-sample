@@ -2,6 +2,8 @@ package kotlinddd.web.configuration.injection
 
 import kotlinddd.application.order.OrderCommandHandlers
 import kotlinddd.domain.order.OrderRepository
+import kotlinddd.domain.order.PaymentService
+import org.axonframework.eventhandling.EventBus
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -11,8 +13,14 @@ class CommandHandlers {
     @Autowired
     lateinit var orderRepository: OrderRepository
 
+    @Autowired
+    lateinit var paymentService: PaymentService
+
+    @Autowired
+    lateinit var eventBus: EventBus
+
     @Bean
-    fun getOrderHandler(): OrderCommandHandlers {
-        return OrderCommandHandlers(orderRepository)
+    fun getOrderCommandHandler(): OrderCommandHandlers {
+        return OrderCommandHandlers(orderRepository, paymentService, eventBus)
     }
 }

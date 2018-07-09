@@ -1,4 +1,4 @@
-package repositories
+package kotlinddd.infrastructure.repositories
 
 import kotlinddd.domain.order.Order
 import kotlinddd.domain.order.OrderRepository
