@@ -1,4 +1,5 @@
 dependencies {
+    implementation project(":domain")
     compile("org.axonframework:axon-core:$axonVersion") {
         exclude module:'xpp3' //removed to not conflict with xml parser included in :web project Spring dependency
     }

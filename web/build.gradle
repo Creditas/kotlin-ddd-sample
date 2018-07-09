@@ -27,7 +27,8 @@ dependencies {
     }
     implementation "org.axonframework:axon-spring:$axonVersion"
     implementation "org.axonframework:axon-spring-boot-autoconfigure:$axonVersion"
-    
+    implementation "org.projectlombok:lombok:1.18.0"
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.jetbrains.kotlin:kotlin-test-junit:1.0.6'
 }
