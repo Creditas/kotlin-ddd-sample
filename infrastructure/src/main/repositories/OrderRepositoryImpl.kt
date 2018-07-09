@@ -1,17 +1,20 @@
-package repositories
+package kotlinddd.infrastructure.repositories
 
 import kotlinddd.domain.order.Order
 import kotlinddd.domain.order.OrderRepository
 import kotlinddd.domain.order.Product
-import order.Customer
+import kotlinddd.domain.order.customer.Address
+import kotlinddd.domain.order.customer.Customer
 import org.javamoney.moneta.Money
 import java.util.UUID
 import javax.money.Monetary
 
 class OrderRepositoryImpl : OrderRepository {
+    private val fakeCustomer = Customer(UUID.randomUUID(), "John Doe", Address("a",1, "c", "d"))
+
     override fun findById(id: UUID): Order {
         return Order(id = id,
-                     customer = Customer(UUID.randomUUID(), "John Doe"))
+                     customer = fakeCustomer)
     }
 
     override fun findProductById(productId: UUID): Product {
@@ -21,7 +24,7 @@ class OrderRepositoryImpl : OrderRepository {
     }
 
     override fun findCustomerById(customerId: UUID): Customer {
-        return Customer(customerId, "John Doe")
+        return fakeCustomer
     }
 
     override fun save(order: Order) {

@@ -1,3 +1,6 @@
 dependencies {
     compile "org.javamoney:moneta:1.2.1"
+    compile("org.axonframework:axon-core:$axonVersion") {
+        exclude module:'xpp3' //removed to not conflict with xml parser included in :web project Spring dependency
+    }
 }

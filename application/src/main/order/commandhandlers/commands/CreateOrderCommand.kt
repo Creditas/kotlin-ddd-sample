@@ -1,6 +1,5 @@
-package kotlinddd.application.order.commands
+package kotlinddd.application.order.commandhandlers.commands
 
-import order.Customer
 import java.util.UUID
 
 data class CreateOrderCommand(val customerId: UUID)
