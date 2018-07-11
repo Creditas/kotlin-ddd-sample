@@ -1,5 +1,6 @@
 package kotlinddd.web.configuration.injection
 
+import kotlinddd.domain.shipping.ShippingService
 import kotlinddd.infrastructure.services.EmailNotificationService
 import kotlinddd.infrastructure.services.FedExDeliveryService
 import kotlinddd.infrastructure.services.PaymentServiceImpl
@@ -21,5 +22,10 @@ class InfrastructureServices {
     @Bean
     fun getEmailNotificationService(): EmailNotificationService {
         return EmailNotificationService()
+    }
+
+    @Bean
+    fun getShippingService(): ShippingService {
+        return ShippingService(getEmailNotificationService(), getFedExDeliveryService())
     }
 }

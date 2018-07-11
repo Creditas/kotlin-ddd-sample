@@ -1,17 +1,16 @@
 package kotlinddd.web.controllers
 
-import kotlinddd.application.order.commandhandlers.commands.AddProductCommand
-import kotlinddd.application.order.commandhandlers.commands.ChangeProductQuantityCommand
-import kotlinddd.application.order.commandhandlers.commands.CreateOrderCommand
-import kotlinddd.application.order.commandhandlers.commands.RemoveProductCommand
-import models.request.AddProductRequest
-import models.request.ChangeProductQuantityRequest
-import models.request.CreateOrderRequest
+import kotlinddd.application.order.commandhandlers.commands.*
+import kotlinddd.domain.order.payment.CreditCard
+import kotlinddd.web.models.request.AddProductRequest
+import kotlinddd.web.models.request.ChangeProductQuantityRequest
+import kotlinddd.web.models.request.CreateOrderRequest
+import kotlinddd.web.models.request.PayOrderRequest
 import org.axonframework.commandhandling.gateway.CommandGateway
-import java.util.UUID
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
+import java.util.*
 
 @RestController
 class OrderController(val commandGateway: CommandGateway) {
@@ -52,6 +51,17 @@ class OrderController(val commandGateway: CommandGateway) {
                       @PathVariable("productId") productId: String) {
 
         val command = RemoveProductCommand(UUID.fromString(orderId), UUID.fromString(productId))
+
+        commandGateway.sendAndWait<UUID>(command)
+    }
+
+    @PatchMapping("/orders/{orderId}")
+    @ResponseStatus(HttpStatus.OK)
+    fun payOrder(@PathVariable("orderId") orderId: String,
+                 @RequestBody request: PayOrderRequest) {
+
+        val card = CreditCard(request.cardName, request.cardNumber, request.expirationDate ?: Date(), request.verificationCode)
+        val command = PayOrderCommand(UUID.fromString(orderId), card)
 
         commandGateway.sendAndWait<UUID>(command)
     }
