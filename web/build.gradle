@@ -26,6 +26,7 @@ dependencies {
     compile("org.axonframework:axon-core:$axonVersion") {
         exclude module:'xpp3'
     }
+
     implementation "org.axonframework:axon-spring:$axonVersion"
     implementation "org.axonframework:axon-spring-boot-autoconfigure:$axonVersion"
     implementation "org.springframework.amqp:spring-rabbit:$spring_boot_version"
