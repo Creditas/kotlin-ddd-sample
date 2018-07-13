@@ -50,13 +50,13 @@ Pretty simple, right?
 
 # Setup
 
-Just build the grade dependencies and run the application.
+Just build the gradle dependencies and run the application.
 
 > I've built this project using JDK10 and gradle 4.8.1, both installed on my local machine. As IDE I'm using IntelliJ Community version (free).
 
-### Setup RabbitMQ
+### RabbitMQ setup
 
-There is a file named `AMQPRabbitConfiguration` in this repo (located in `/web/src/main/configuration/injection/AMQPRabbitConfiguration.kt`) where I've configured axon to integrate with RabbitMQ for sending and receiving persistent messages. To use that just remove the comments on that file. 
+There is a file named `AMQPRabbitConfiguration` in this repo (located [here](https://github.com/fabriciorissetto/kotlin-ddd-sample/blob/master/web/src/main/configuration/injection/AMQPRabbitConfiguration.kt)) where is the configuration needed by axon to integrate with RabbitMQ (to send end receive persistent messages). To use that, just remove the comments on that file. 
 
 You need a running rabbit, you can start one in a docker container using the following commands:
 
@@ -65,15 +65,14 @@ docker pull rabbitmq
 docker run -d --hostname my-rabbit --name some-rabbit rabbitmq:3-management
 ```
 
-You can look at the rabbit UI by the following link:
+You can access the rabbit UI by this url: [http://172.17.0.2:15672](http://172.17.0.2:15672).
 
-* [http://172.17.0.2:15672](http://172.17.0.2:15672)
- * User: guest
- * Password: guest
+* **User**: guest
+* **Password**: guest
  
-That's it. You don't need to do anything else, the setup in the `AMQPRabbitConfiguration` class will create the necessary queue and exchange in Rabbit and also configure axon accordingly. Note that if you customize something in your rabbit server you need to adjust the `application.properties` file (because it is using the default ports, ips, etc).
+That's it. You don't need to do anything else, the setup in the `AMQPRabbitConfiguration` class will create the necessary queue and exchange in Rabbit and also configure axon accordingly. Note that if you customize something in your rabbit server you need to adjust the `application.properties` file (here we are using the default ports, ips, etc).
 
-* This both dependencies are used just for Rabbit:
+This both dependencies are used just for Rabbit:
  * `org.springframework.boot:spring-boot-starter-amqp`: enables AMQP in Spring Boot
  * `org.axonframework:axon-amqp`: configures some beans for axon to integrate with `SpringAMQPMessageSource` class from the above dependency
 
@@ -81,15 +80,14 @@ If you don't want o use an AMQP you can remove this dependencies from the web pr
 
 # Tests
 
-The project currently doens't have unit tests :(
+The project doesn't have unit tests yet :(
 
-## Postman requests
+### Postman requests
 
 You can trigger all the operations of this project using the requests inside this json (just import it on your local postman).
 
-### Nice to have in the future
+# Nice to have in the future (backlog)
 - [ ] Include a Event Sourced bounded context or Aggregate
 - [ ] Domain Notifications instead of raising exceptions
-- [ ] Event Sourcing
 - [ ] Implement concrete repositories with JPA (the current implementations just returns fake instances)
-- [ ] Include docker container with JDK
+- [ ] Include docker container with JDK and gradle configured
