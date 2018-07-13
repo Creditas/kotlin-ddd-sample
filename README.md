@@ -50,9 +50,17 @@ Pretty simple, right?
 
 # Setup
 
-Just build the gradle dependencies and run the application.
+**Linux/MacOS:** 
 
-> I've built this project using JDK10 and gradle 4.8.1, both installed on my local machine. As IDE I'm using IntelliJ Community version (free).
+```sh
+./gradlew build
+```
+
+**Windows:**
+
+```sh
+gradlew.bat build
+```
 
 ### RabbitMQ setup
 
@@ -86,8 +94,9 @@ If you don't want o use an AMQP you can remove this dependencies from the web pr
 
 You can trigger all the operations of this project using the requests inside [this json](https://github.com/fabriciorissetto/kotlin-ddd-sample/blob/master/docs/postman_example_requests.json) (just import it on your local postman).
 
-# Nice to have in the future (backlog)
+# [BACKLOG] Nice to have in the future
 - [ ] Include a Event Sourced bounded context or Aggregate
 - [ ] Domain Notifications instead of raising exceptions
 - [ ] Implement concrete repositories with JPA (the current implementations just returns fake instances)
 - [ ] Include docker container with JDK and gradle configured
+- [ ] Configure JPMS (java 9 modules)
