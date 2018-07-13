@@ -18,11 +18,11 @@ class AMQP {
     @Autowired
     lateinit var springAMQPMessageSource: SpringAMQPMessageSource
 
-//    @Autowired
-//    fun configure(configurer: DefaultConfigurer, eventProcessingConfiguration: EventProcessingConfiguration, eventHandlingConfiguration: EventHandlingConfiguration, rabbitMessageSource: SpringAMQPMessageSource) {
-//        //TODO: find a way to make the springAMQPMessageSource the default source for all processors
-//        eventProcessingConfiguration.registerSubscribingEventProcessor("kotlinddd.application.shipping.eventhandlers") { _ -> springAMQPMessageSource }
-//    }
+    @Autowired
+    fun configure(configurer: DefaultConfigurer, eventProcessingConfiguration: EventProcessingConfiguration, eventHandlingConfiguration: EventHandlingConfiguration, rabbitMessageSource: SpringAMQPMessageSource) {
+        //TODO: find a way to make the springAMQPMessageSource the default source for all processors
+        eventProcessingConfiguration.registerSubscribingEventProcessor("kotlinddd.application.shipping.eventhandlers") { _ -> springAMQPMessageSource }
+    }
 
     @Bean
     fun myRabbitMessageSource(serializer: Serializer): SpringAMQPMessageSource {
