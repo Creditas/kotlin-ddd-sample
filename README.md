@@ -37,7 +37,7 @@ Pretty straight forward, the controller receives the request, calls a "specific 
 
 # The domain (problem space)
 
-This project is based on a didactic domain that consists basically in maintain an Order (adding and removing items from it). The operations supported by the application are:
+This project is based on a didactic domain that basically consists in maintaining an Order (adding and removing items in it). The operations supported by the application are:
 
 * Create an order 
 * Add products ta a given order
@@ -76,15 +76,15 @@ This both dependencies are used just for Rabbit:
  * `org.springframework.boot:spring-boot-starter-amqp`: enables AMQP in Spring Boot
  * `org.axonframework:axon-amqp`: configures some beans for axon to integrate with `SpringAMQPMessageSource` class from the above dependency
 
-If you don't want o use an AMQP you can remove this dependencies from the web project gradle file.
+If you don't want o use an AMQP you can remove this dependencies from the web project gradle's file.
 
 # Tests
 
-The project doesn't have unit tests yet :(
+`//TODO: Unit tests`
 
 ### Postman requests
 
-You can trigger all the operations of this project using the requests inside this json (just import it on your local postman).
+You can trigger all the operations of this project using the requests inside [this json](https://github.com/fabriciorissetto/kotlin-ddd-sample/blob/master/docs/postman_example_requests.json) (just import it on your local postman).
 
 # Nice to have in the future (backlog)
 - [ ] Include a Event Sourced bounded context or Aggregate
