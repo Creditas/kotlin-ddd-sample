@@ -11,45 +11,29 @@
   - EventBus (Event Handlers)
 - Gradle
 
-# Architecture
-
-- Domain Driven Design
-- Object oriented programming following SOLID and Clean Code principles
-- Repository Pattern
-- CQRS (same database)
-  - Commands
-  - Queries
-
-### Nice to have in the future
-- [ ] Include a Event Sourced bounded context or Aggregate
-- [ ] Domain Notifications instead of raising exceptions
-- [ ] Event Sourcing
-- [ ] Implement concrete repositories with JPA (the current implementations just returns fake instances)
-- [ ] Include docker container with JDK
-
 # Architecture overview
 
 ## Layers
-- *Web*: Spring controllers and actions
-- *Application*: Orchestrates the jobs in the domain needed to be done to accomplish a certain "use case"
-- *Domain*: Where the business rules resides
-- *Infrastructure*: Technologies concerns resides here (database access, sending emails, calling external APIs)
+- **Web**: Spring controllers and actions
+- **Application**: Orchestrates the jobs in the domain needed to be done to accomplish a certain "use case"
+- **Domain**: Where the business rules resides
+- **Infrastructure**: Technologies concerns resides here (database access, sending emails, calling external APIs)
 
 ## CQRS
 
-CQRS divides your application (and even the database in some cases) into two different paths: Commands and Queries.
+CQRS splits your application (and even the database in some cases) into two different paths: **Commands** and **Queries**.
  
 ### Command side
 
-Every operation that can trigger an side effect on the server must pass through the CQRS "command side". I like to put the "handlers" (commands and events) inside of the application layer because their goals are almost the same: orchestrate domain operations (also usually using infrastructure services). 
+Every operation that can trigger an side effect on the server must pass through the CQRS "command side". I like to put the `Handlers` (commands handlers and events handlers) inside the application layer because their goals are almost the same: orchestrate domain operations (also usually using infrastructure services). 
  
-!(command side)[docs/images/command_side_with_events.jpg]
+![command side](docs/images/command_side_with_events.jpg)
 
 ### Query side
 
 Pretty straight forward, the controller receives the request, calls a "specific repository for queries" and returns a DTO. 
 
-!(query side)[docs/images/query_side.jpg]
+![query side](docs/images/query_side.jpg)
 
 # The domain (problem space)
 
@@ -102,3 +86,10 @@ The project currently doens't have unit tests :(
 ## Postman requests
 
 You can trigger all the operations of this project using the requests inside this json (just import it on your local postman).
+
+### Nice to have in the future
+- [ ] Include a Event Sourced bounded context or Aggregate
+- [ ] Domain Notifications instead of raising exceptions
+- [ ] Event Sourcing
+- [ ] Implement concrete repositories with JPA (the current implementations just returns fake instances)
+- [ ] Include docker container with JDK
