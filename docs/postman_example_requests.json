@@ -1,0 +1,166 @@
+{
+	"id": "b6c3de12-426c-d39a-c242-8a6d3eed22c8",
+	"name": "Kotlin DDD Sample",
+	"description": null,
+	"order": [
+		"e925dd47-9577-d3c5-7c2a-23cbb461a1dd",
+		"239a91b2-1988-617a-074f-97db653c40ad",
+		"9800bb20-10b9-64dd-f4af-609e2437291f",
+		"4f0c1c4d-f2d6-a3a6-f2be-b5a6b20a2310",
+		"987f7fba-f421-ad3f-7f83-7db50a946027"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 0,
+	"owner": "363237",
+	"public": false,
+	"requests": [
+		{
+			"id": "239a91b2-1988-617a-074f-97db653c40ad",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/orders/24/products",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PATCH",
+			"collectionId": "b6c3de12-426c-d39a-c242-8a6d3eed22c8",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Add Product",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1525482047451,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n   \"product_id\": 2,\n   \"quantity\": 10\n}"
+		},
+		{
+			"id": "4f0c1c4d-f2d6-a3a6-f2be-b5a6b20a2310",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/orders/24/products/2",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "b6c3de12-426c-d39a-c242-8a6d3eed22c8",
+			"data": null,
+			"dataMode": "params",
+			"name": "Remove Product",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1525481956607,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"isFromCollection": true,
+			"collectionRequestId": "11a82460-a87d-71cf-6c50-cb4df1b2ede7"
+		},
+		{
+			"id": "9800bb20-10b9-64dd-f4af-609e2437291f",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/orders/24/products/2",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PATCH",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1525482324890,
+			"name": "Change Product Quantity",
+			"description": "",
+			"collectionId": "b6c3de12-426c-d39a-c242-8a6d3eed22c8",
+			"responses": [],
+			"rawModeData": "{\n\t\"quantity\": 6\n}\n"
+		},
+		{
+			"id": "987f7fba-f421-ad3f-7f83-7db50a946027",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/orders/5c9d6e6e-f3c6-430a-b55e-3bfc76a75db8",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PATCH",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1531228983545,
+			"name": "Pay Order",
+			"description": "",
+			"collectionId": "b6c3de12-426c-d39a-c242-8a6d3eed22c8",
+			"responses": [],
+			"rawModeData": "{\n   \"cardName\": \"a\",\n   \"cardNumber\": \"b\",\n   \"expirationDate\": \"2020-10-10\",\n   \"verificationCode\": \"c\"\n}"
+		},
+		{
+			"id": "e925dd47-9577-d3c5-7c2a-23cbb461a1dd",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/orders",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1530833588608,
+			"name": "Create Order",
+			"description": "",
+			"collectionId": "b6c3de12-426c-d39a-c242-8a6d3eed22c8",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "438453b3-118e-7faa-0490-ed01ee684ad5",
+			"rawModeData": "{\n   \"customerId\": \"f4587fa6-4080-49aa-be6a-ba8c2c15eda0\"\n}"
+		}
+	]
+}
