@@ -1,11 +1,13 @@
 package kotlinddd.web.controllers
 
 import kotlinddd.application.order.commandhandlers.commands.*
+import kotlinddd.domain.BusinessException
 import kotlinddd.domain.order.payment.CreditCard
-import kotlinddd.web.models.request.AddProductRequest
-import kotlinddd.web.models.request.ChangeProductQuantityRequest
-import kotlinddd.web.models.request.CreateOrderRequest
-import kotlinddd.web.models.request.PayOrderRequest
+import kotlinddd.infrastructure.queries.OrdersQuery
+import kotlinddd.infrastructure.queries.dtos.OrderDTO
+import kotlinddd.infrastructure.queries.dtos.OrderPerUsersDTO
+import kotlinddd.web.models.*
+import kotlinddd.web.models.PayOrderRequest
 import org.axonframework.commandhandling.gateway.CommandGateway
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -14,6 +16,7 @@ import java.util.*
 
 @RestController
 class OrderController(val commandGateway: CommandGateway) {
+    // Commands
     @PostMapping("/orders")
     fun createOrder(@RequestBody request: CreateOrderRequest) : ResponseEntity<UUID> {
         val command = CreateOrderCommand(UUID.fromString(request.customerId))
@@ -64,5 +67,33 @@ class OrderController(val commandGateway: CommandGateway) {
         val command = PayOrderCommand(UUID.fromString(orderId), card)
 
         commandGateway.sendAndWait<UUID>(command)
+    }
+
+    // Queries
+    @GetMapping("/orders/{orderId}")
+    fun findOrderById(@PathVariable("orderId") orderId: String): OrderDTO {
+        return OrdersQuery.findOrderById(UUID.fromString(orderId))
+    }
+
+    @GetMapping("/orders", params = ["orders_per_users"])
+    fun findOrderPerUsers() : List<OrderPerUsersDTO>{
+        return OrdersQuery.findOrderPerUsers()
+    }
+
+    @GetMapping("/orders", params = ["last_orders"])
+    fun findLastOrders() : List<Any> {
+        return OrdersQuery.findLastOrders()
+    }
+
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(BusinessException::class)
+    fun handleException() {
+
+    }
+
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ExceptionHandler(Exception::class)
+    fun handleException() {
+        return 
     }
 }

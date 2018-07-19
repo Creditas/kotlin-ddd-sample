@@ -30,7 +30,7 @@ Every operation that can trigger an side effect on the server must pass through 
 
 ### Query side
 
-Pretty straight forward, the controller receives the request, calls a "specific repository for queries" and returns a DTO. 
+Pretty straight forward, the controller receives the request, calls the related query repo and returns a DTO (defined on infrastructure layer itself). 
 
 ![query side](docs/images/query_side.jpg)
 

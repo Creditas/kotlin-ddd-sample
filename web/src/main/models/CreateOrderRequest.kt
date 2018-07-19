@@ -1,4 +1,4 @@
-package kotlinddd.web.models.request
+package kotlinddd.web.models
 
 import lombok.NoArgsConstructor
 
