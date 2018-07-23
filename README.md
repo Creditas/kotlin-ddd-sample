@@ -63,7 +63,7 @@ gradlew.bat build
 
 ### RabbitMQ setup
 
-There is a file named `AMQPRabbitConfiguration` in this repo (located [here](https://github.com/fabriciorissetto/kotlin-ddd-sample/blob/master/web/src/main/configuration/injection/AMQPRabbitConfiguration.kt)) where is the configuration needed by axon to integrate with RabbitMQ (to send end receive persistent messages). To use that, just remove the comments on that file. 
+There is a file named `AMQPRabbitConfiguration` in this repo (located [here](https://github.com/fabriciorissetto/kotlin-ddd-sample/blob/master/web/src/main/configuration/injection/AMQPRabbitConfiguration.kt)) where the configuration needed by axon to integrate with RabbitMQ (to send end receive persistent messages) is stored. To use that, just remove the comments. 
 
 You need a running rabbit, you can start one in a docker container using the following commands:
 
