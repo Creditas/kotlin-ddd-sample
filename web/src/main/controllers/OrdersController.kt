@@ -85,15 +85,15 @@ class OrderController(val commandGateway: CommandGateway) {
         return OrdersQuery.findLastOrders()
     }
 
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler(BusinessException::class)
-    fun handleException() {
-
-    }
-
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    @ExceptionHandler(Exception::class)
-    fun handleException() {
-        return 
-    }
+//    @ResponseStatus(HttpStatus.BAD_REQUEST)
+//    @ExceptionHandler(BusinessException::class)
+//    fun handleException() {
+//
+//    }
+//
+//    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+//    @ExceptionHandler(Exception::class)
+//    fun handleException() {
+//
+//    } 
 }
