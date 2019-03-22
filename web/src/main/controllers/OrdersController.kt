@@ -20,7 +20,7 @@ class OrderController(val commandGateway: CommandGateway) {
     @PostMapping("/orders")
     fun createOrder(@RequestBody request: CreateOrderRequest) : ResponseEntity<UUID> {
         val command = CreateOrderCommand(UUID.fromString(request.customerId))
-        val orderId = commandGateway.send<UUID>(command).get()
+        val orderId = commandGateway.sendAndWait<UUID>(command)
 
         return ResponseEntity(orderId, HttpStatus.CREATED)
     }

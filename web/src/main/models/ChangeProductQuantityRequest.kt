@@ -1,8 +1,3 @@
 package kotlinddd.web.models
 
-import lombok.NoArgsConstructor
-
-@NoArgsConstructor
-class ChangeProductQuantityRequest {
-    var quantity: Int = 0
-}
+data class ChangeProductQuantityRequest(val quantity: Int = 0)

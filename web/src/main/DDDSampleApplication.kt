@@ -1,11 +1,11 @@
 package kotlinddd.web
 
-import org.springframework.boot.SpringApplication
+import org.springframework.boot.*
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @SpringBootApplication
-class Application
+class DDDSampleApplication
 
 fun main(args: Array<String>) {
-    SpringApplication.run(Application::class.java, *args)
+    runApplication<DDDSampleApplication>()
 }
