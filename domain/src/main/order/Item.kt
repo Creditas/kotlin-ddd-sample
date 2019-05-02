@@ -2,14 +2,9 @@ package kotlinddd.domain.order
 
 import kotlinddd.domain.BusinessException
 
-class Item {
-    val product: Product
-    private var quantity: Int
-
-    constructor(product: Product, quantity: Int) {
+class Item(val product: Product, private var quantity: Int) {
+    init {
         validateQuantity(quantity)
-        this.product = product
-        this.quantity = quantity
     }
 
     fun changeQuantity(quantity: Int) {

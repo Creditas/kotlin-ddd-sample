@@ -18,9 +18,9 @@ class OrderRepositoryImpl : OrderRepository {
     }
 
     override fun findProductById(productId: UUID): Product {
-        return Product(id = productId,
-                       description = "Keyboard",
-                       value = Money.of(19.90, Monetary.getCurrency("USD")))
+        return Product(productId,
+                       "Keyboard",
+                       Money.of(19.90, Monetary.getCurrency("USD")))
     }
 
     override fun findCustomerById(customerId: UUID): Customer {

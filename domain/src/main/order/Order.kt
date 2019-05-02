@@ -47,6 +47,8 @@ class Order(val id: UUID, val customer: Customer) {
         }
     }
 
+    fun items() = items.toList()
+
     private fun validateIfProductIsOnList(product: Product) {
         var isOnList = items.any { it.product == product }
         if (!isOnList)
