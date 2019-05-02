@@ -51,13 +51,13 @@ Pretty simple, right?
 
 **Linux/MacOS:** 
 
-```sh
+```
 ./gradlew build
 ```
 
 **Windows:**
 
-```sh
+```
 gradlew.bat build
 ```
 
@@ -87,7 +87,7 @@ If you don't want o use an AMQP you can remove this dependencies from the web pr
 
 # Tests
 
-```sh
+```
 ./gradlew test
 ```
 
