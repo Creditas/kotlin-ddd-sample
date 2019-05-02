@@ -87,7 +87,9 @@ If you don't want o use an AMQP you can remove this dependencies from the web pr
 
 # Tests
 
-`//TODO: Unit tests`
+```sh
+./gradlew test
+```
 
 ### Postman requests
 
