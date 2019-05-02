@@ -16,23 +16,18 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 dependencies {
-    implementation project(':application')
-    implementation project(':domain')
-    implementation project(':infrastructure')
-    implementation 'org.jetbrains.kotlin:kotlin-reflect'
-    implementation 'org.springframework.boot:spring-boot-starter'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-amqp'
-    compile("org.axonframework:axon-core:$axonVersion") {
-        exclude module:'xpp3'
-    }
+    implementation project(":application")
+    implementation project(":domain")
+    implementation project(":infrastructure")
+
+    implementation "org.jetbrains.kotlin:kotlin-reflect"
+    implementation "org.springframework.boot:spring-boot-starter"
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-starter-amqp"
+    implementation "org.springframework.amqp:spring-rabbit:$spring_boot_version"
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
 
     implementation "org.axonframework:axon-spring:$axonVersion"
     implementation "org.axonframework:axon-spring-boot-autoconfigure:$axonVersion"
-    implementation "org.springframework.amqp:spring-rabbit:$spring_boot_version"
     implementation "org.axonframework:axon-amqp:$axonVersion"
-    implementation "org.projectlombok:lombok:1.18.0"
-
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.jetbrains.kotlin:kotlin-test-junit:1.0.6'
 }
