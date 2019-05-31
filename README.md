@@ -96,8 +96,8 @@ If you don't want o use an AMQP you can remove this dependencies from the web pr
 You can trigger all the operations of this project using the requests inside [this json](https://github.com/fabriciorissetto/kotlin-ddd-sample/blob/master/docs/postman_example_requests.json) (just import it on your local postman).
 
 # Backlog
-- [ ] Implement Unit Tests (Domain layer)
-- [ ] Implement Integrated Tests (Web layer)
+- [x] Implement Unit Tests examples (Domain layer)
+- [ ] Implement Integrated Tests examples (Web layer)
 - [ ] Include docker container with JDK and gradle configured
 - [ ] Configure Swagger and Swagger UI
 - [ ] Include a Event Sourced bounded context or Aggregate
