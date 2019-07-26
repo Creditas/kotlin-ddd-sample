@@ -2,6 +2,8 @@
 
 **Kotlin DDD Sample** is a open-source project meant to be used as a start point, or an inspiration, for those who want to build Domain Driven Design applications in Kotlin. The domain model was inspired by [this](https://github.com/mcapanema/ddd-rails-example) repo where we built a sample project using Rails.
 
+**NOTE:** This is NOT intended to be a definitive solution or a production ready project
+
 # Technologies/frameworks/tools involved
 
 - Spring
